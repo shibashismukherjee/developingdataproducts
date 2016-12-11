@@ -26,7 +26,7 @@ univSites <- c(
 "<a href='http://oregonstate.edu'>Oregon State University</a><BR> # Of Students:28886",
 "<a href='http://www.ohsu.edu/xd/'>Oregon Health and Science University</a><BR> # Of Students:3900",
 "<a href='http://www.pdx.edu/'>Portland State University</a><BR> # Of Students:28076",
-"<a href='http://www.eou.edu/'>Eastern oregon University</a><BR> # Of Students:3741",
+"<a href='http://www.eou.edu/'>Eastern Oregon University</a><BR> # Of Students:3741",
 "<a href='http://www2.sou.edu/'>Southern Oregon University</a><BR> # Of Students:6203",
 "<a href='http://www.wou.edu/'>Western Oregon University</a><BR> # Of Students:6214"
 )
