@@ -1,0 +1,43 @@
+---
+title: "Leaflet Assignment"
+author: "Shibashis Mukherjee"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+```
+
+## `r format(Sys.Date(), "%A, %B %d, %Y")`
+
+## Map of Public Universities in Oregon
+
+### The following is a simple map of the major public universities in Oregon built using leaflet.Clicking on the icons shows a link to the university site and number of students at the university.
+
+```{r}
+suppressMessages(library(leaflet))
+
+univicon <- makeIcon(
+  iconUrl ="pubuniv.jpg", iconWidth=25*215/230, iconHeight = 25, 
+  iconAnchorX = 25*215/230/2, iconAnchorY = 10)
+univSites <- c(
+"<a href='http://uoregon.edu'>University of Oregon</a><BR> # Of Students:23634",
+"<a href='http://oregonstate.edu'>Oregon State University</a><BR> # Of Students:28886",
+"<a href='http://www.ohsu.edu/xd/'>Oregon Health and Science University</a><BR> # Of Students:3900",
+"<a href='http://www.pdx.edu/'>Portland State University</a><BR> # Of Students:28076",
+"<a href='http://www.eou.edu/'>Eastern oregon University</a><BR> # Of Students:3741",
+"<a href='http://www2.sou.edu/'>Southern Oregon University</a><BR> # Of Students:6203",
+"<a href='http://www.wou.edu/'>Western Oregon University</a><BR> # Of Students:6214"
+)
+latv <- c(44.0448, 44.5638, 45.499, 45.5119, 45.3213, 42.1871, 44.8513)
+lonv <- c(-123.0726, -123.2794, -122.6859, -122.6846, -118.0902, -122.6958, -123.2379
+)
+
+df <- data.frame(latitude = latv, longitude = lonv)
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(icon = univicon, popup = univSites)
+``` 
+
