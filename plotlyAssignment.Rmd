@@ -1,0 +1,25 @@
+---
+title: "Plotly_Asssignment"
+author: "Shibashis Mukherjee"
+date: "December 18, 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+```
+
+## Chatterjee Price Attitude Plot
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+plot_ly(x = as.numeric(rownames(attitude)), y = attitude$rating, type="scatter", mode = "markers",  size=attitude$learning, color = attitude$complaints)
+```
+
+## Attitude Plot Explanation
+
+- The Chatterjee Price attitude data shows the survey results from 35 clerical   employees about 30 departments of a large financial organization. The data contains ratings in seven different categories along with a overall rating for each department. 
+
+- The plot is a scatter plot that shows the overall rating for each department with the departments on the X axis and rating on the Y axis. The size of the circles shows the rating forlearning opportunity and the color shows how well the department handled complaints.
+
+## Thank You
